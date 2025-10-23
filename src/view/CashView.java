@@ -57,7 +57,7 @@ public class CashView extends JDialog {
 		textFieldCash.setBounds(117, 75, 86, 20);
 		contentPanel.add(textFieldCash);
 		textFieldCash.setColumns(10);
-		textFieldCash.setText(shop.getCash().toString());
+		textFieldCash.setText(String.valueOf(shop.getCash()));
 //		{
 //			JPanel buttonPane = new JPanel();
 //			buttonPane.setLayout(new FlowLayout(FlowLayout.RIGHT));

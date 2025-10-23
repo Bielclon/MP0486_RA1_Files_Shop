@@ -99,14 +99,20 @@ public class LoginView extends JFrame implements ActionListener{
 						throw new LimitLoginException("Error login superado", counterErrorLogin);
 					}
 					if (logged) {
-						// redirect to shop window
-						ShopView shop = new ShopView();
-						shop.setExtendedState(NORMAL);
-						shop.setVisible(true);
-						
-						// release current screen
-						dispose();					
-						
+					    // 1. Crear la instancia de la tienda
+					    main.Shop shop = new main.Shop();
+					    
+					    // 2. Cargar el inventario (usando el DAO que arreglamos)
+					    shop.readInventory();
+					    
+					    // 3. Crear la vista principal y PASARLE el objeto shop
+					    ShopView shopView = new ShopView(shop);
+					    shopView.setExtendedState(NORMAL);
+					    shopView.setVisible(true);
+					    
+					    // release current screen
+					    dispose();					
+					
 					} else {
 						counterErrorLogin++;
 						JOptionPane.showMessageDialog(null, "Usuario o password incorrectos ", "Error",
