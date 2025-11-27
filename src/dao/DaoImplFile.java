@@ -74,6 +74,24 @@ public class DaoImplFile implements Dao {
             return false; 
         }
     }
+    
+ // ... resto de tu código existente en DaoImplFile ...
+
+    @Override
+    public void addProduct(Product product) {
+        // No implementado para ficheros en esta práctica
+    }
+
+    @Override
+    public void updateProduct(Product product) {
+        // No implementado para ficheros en esta práctica
+    }
+
+    @Override
+    public void deleteProduct(int productId) {
+        // No implementado para ficheros en esta práctica
+    }
+
 
     // --- MÉTODOS SIN IMPLEMENTACIÓN ---
     

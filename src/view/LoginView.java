@@ -103,7 +103,7 @@ public class LoginView extends JFrame implements ActionListener{
 					    main.Shop shop = new main.Shop();
 					    
 					    // 2. Cargar el inventario (usando el DAO que arreglamos)
-					    shop.readInventory();
+					    shop.loadInventory();
 					    
 					    // 3. Crear la vista principal y PASARLE el objeto shop
 					    ShopView shopView = new ShopView(shop);

@@ -32,7 +32,7 @@ public class Employee extends Person implements Logable{
 	public int getEmployeeId() {
 		return employeeId;
 	}
-
+	
 	/**
 	 * @param employeeId the employeeId to set
 	 */
