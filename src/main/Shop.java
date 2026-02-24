@@ -6,7 +6,7 @@ import model.Sale;
 import model.Employee; // Asegúrate de tener esta clase si la usas
 import java.util.ArrayList;
 import java.util.Scanner;
-
+import dao.DaoImplMongoDB;
 import dao.Dao;
 import dao.DaoImplJDBC;
 
@@ -25,7 +25,7 @@ public class Shop {
         this.sales = new ArrayList<>();
         
         // Inicialización usando la implementación JDBC 
-        this.dao = new DaoImplJDBC(); 
+        this.dao = new DaoImplMongoDB();
     }
 
     public static void main(String[] args) {
